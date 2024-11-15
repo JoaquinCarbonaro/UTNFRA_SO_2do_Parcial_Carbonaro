@@ -1,0 +1,11 @@
+---
+# tasks file for estructura
+- name: "Crear directorios en /tmp/2do_parcial/"
+  file:
+    path: "/tmp/2do_parcial/{{ item }}"
+    state: directory
+    mode: '0775'
+    recurse: yes
+  with_items: 
+    - "alumno"
+    - "equipo"

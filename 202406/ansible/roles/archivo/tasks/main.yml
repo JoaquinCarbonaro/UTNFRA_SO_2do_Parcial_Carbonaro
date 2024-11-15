@@ -1,0 +1,12 @@
+---
+# tasks file for archivo
+- name: "Generar datos del alumno en /tmp/2do_parcial/alumno/datos_alumno.txt"
+  template:
+    src: "datos_alumno.txt.j2"
+    dest: "/tmp/2do_parcial/alumno/datos_alumno.txt"
+
+- name: "Generar datos del equipo en /tmp/2do_parcial/equipo/datos_equipo.txt"
+  template:
+    src: "datos_equipo.txt.j2"
+    dest: "/tmp/2do_parcial/equipo/datos_equipo.txt"
+

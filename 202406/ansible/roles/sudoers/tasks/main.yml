@@ -1,0 +1,11 @@
+---
+# tasks file for sudoers
+- name: "Configurar sudoers para el grupo 2PSupervisores sin contraseña"
+  become: yes
+  lineinfile:
+    path: /etc/sudoers
+    state: present
+    regexp: '^%2PSupervisores'
+    line: '%2PSupervisores ALL=(ALL) NOPASSWD: ALL'
+    validate: 'visudo -cf %s'
+

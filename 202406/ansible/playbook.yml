@@ -1,0 +1,22 @@
+---
+- hosts: all
+
+  tasks:
+    - include_role:
+        name: 2do_parcial
+    
+    - name: "Otra tarea"
+      debug:
+        msg: "Despues de la ejecucion del rol"
+
+    - name: "Importar rol estructura"
+      import_role:
+        name: estructura
+
+    - name: "Importar rol archivo"
+      import_role:
+        name: archivo
+
+    - name: "Importar rol sudoers"
+      import_role:
+        name: sudoers
